@@ -21,19 +21,17 @@ public class Utils
         return hash;
     }
 
-    public static string Encrypt(byte[] input)
+    public static byte[] Encrypt(byte[] input)
     {
-        var encryptedData = ProtectedData.Protect(input, null, DataProtectionScope.CurrentUser);
-        var output = Convert.ToBase64String(encryptedData);
+        var output = ProtectedData.Protect(input, null, DataProtectionScope.CurrentUser);
         return output;
     }
 
-    public static byte[] Decrypt(string input)
+    public static byte[] Decrypt(byte[] input)
     {
         try
         {
-            var encryptedData = Convert.FromBase64String(input);
-            var output = ProtectedData.Unprotect(encryptedData, null, DataProtectionScope.CurrentUser);
+            var output = ProtectedData.Unprotect(input, null, DataProtectionScope.CurrentUser);
             return output;
         }
         catch (Exception)

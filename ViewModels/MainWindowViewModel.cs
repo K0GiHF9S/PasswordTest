@@ -16,7 +16,7 @@ public partial class MainWindowViewModel : ObservableObject
 
         try
         {
-            var encrypted = File.ReadAllText("login.info");
+            var encrypted = File.ReadAllBytes("login.info");
             var hash = Utils.Decrypt(encrypted);
             if (Utils.VerifyPassword(hash))
             {

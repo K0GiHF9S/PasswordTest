@@ -20,7 +20,7 @@ public partial class LoginViewModel([Inject] IPresentationService presentationSe
         if (Utils.VerifyPassword(hash))
         {
             var encrypted = Utils.Encrypt(hash);
-            File.WriteAllText("login.info", encrypted);
+            File.WriteAllBytes("login.info", encrypted);
             presentationService.NavigateToMainAsync("LoginFrame");
         }
         else
