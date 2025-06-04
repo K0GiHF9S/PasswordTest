@@ -10,5 +10,6 @@
 	Height="350">
 	<Grid>
 		<kamishibai:NavigationFrame FrameName="LoginFrame" />
+		<materialDesign:Snackbar MessageQueue="{Binding MessageQueue}" />
 	</Grid>
 </Window>

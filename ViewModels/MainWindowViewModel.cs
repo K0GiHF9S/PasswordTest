@@ -1,13 +1,20 @@
-﻿using PasswordTest.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MaterialDesignThemes.Wpf;
+using PasswordTest.Models;
 using System.IO;
 
 namespace PasswordTest.ViewModels;
 
-public class MainWindowViewModel
+public partial class MainWindowViewModel : ObservableObject
 {
-    public MainWindowViewModel(IPresentationService presentationService)
+    [ObservableProperty]
+    private ISnackbarMessageQueue _messageQueue;
+
+    public MainWindowViewModel(IPresentationService presentationService, ISnackbarMessageQueue messageQueue)
     {
-		try
+        _messageQueue = messageQueue;
+
+        try
         {
             var encrypted = File.ReadAllText("login.info");
             var hash = Utils.Decrypt(encrypted);
@@ -17,9 +24,9 @@ public class MainWindowViewModel
                 return;
             }
         }
-		catch (Exception)
-		{
-		}
+        catch (Exception)
+        {
+        }
         presentationService.NavigateToLoginAsync("LoginFrame");
     }
 }
