@@ -1,0 +1,10 @@
+﻿<UserControl
+	x:Class="PasswordTest.Views.MainView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Grid>
+		<TextBlock
+			FontSize="20"
+			Text="ようこそ！認証に成功しました。" />
+	</Grid>
+</UserControl>

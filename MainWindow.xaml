@@ -1,0 +1,14 @@
+﻿<Window
+	x:Class="PasswordTest.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:kamishibai="clr-namespace:Kamishibai;assembly=Kamishibai.View"
+	xmlns:local="clr-namespace:PasswordTest.Views"
+	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+	Title="WPF認証アプリ"
+	Width="525"
+	Height="350">
+	<Grid>
+		<kamishibai:NavigationFrame FrameName="LoginFrame" />
+	</Grid>
+</Window>
