@@ -1,7 +1,6 @@
 ﻿using Kamishibai;
 using Microsoft.Extensions.Hosting;
 using PasswordTest;
-using PasswordTest.Models;
 using PasswordTest.ViewModels;
 using PasswordTest.Views;
 

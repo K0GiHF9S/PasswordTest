@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Kamishibai;
-using MaterialDesignThemes.Wpf;
 using PasswordTest.Models;
 using System.IO;
 
