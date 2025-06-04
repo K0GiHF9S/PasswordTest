@@ -5,6 +5,6 @@
 	<Grid>
 		<TextBlock
 			FontSize="20"
-			Text="ようこそ！認証に成功しました。" />
+			Text="Welcome!You have successfully authenticated." />
 	</Grid>
 </UserControl>

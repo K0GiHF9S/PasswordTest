@@ -5,7 +5,7 @@
 	xmlns:kamishibai="clr-namespace:Kamishibai;assembly=Kamishibai.View"
 	xmlns:local="clr-namespace:PasswordTest.Views"
 	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-	Title="WPF認証アプリ"
+	Title="WPF Authentication App"
 	Width="525"
 	Height="350">
 	<Grid>
